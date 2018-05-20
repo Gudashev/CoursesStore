@@ -1,0 +1,177 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30D86D9C-CFEC-4C5B-B679-9145F73D2123}</ProjectGuid>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Alex</RootNamespace>
+    <AssemblyName>Alex</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+    <Content Include="Global.asax" />
+    <Content Include="pages\English.aspx" />
+    <Content Include="pages\css\index.css" />
+    <Content Include="content\business\images\first.jpg" />
+    <Content Include="content\business\images\second.jpg" />
+    <Content Include="content\business\images\third.jpg" />
+    <Content Include="content\english\images\first.jpg" />
+    <Content Include="content\english\images\second.jpg" />
+    <Content Include="content\english\images\third.jpg" />
+    <Content Include="content\index\images\gears.jpg" />
+    <Content Include="content\index\images\tree.jpg" />
+    <Content Include="pages\Business.aspx" />
+    <Content Include="pages\css\english.css" />
+    <Content Include="pages\css\business.css" />
+    <Content Include="authorization\Exit.aspx" />
+    <Content Include="authorization\Login.aspx" />
+    <Content Include="authorization\css\authorization.css" />
+    <Content Include="authorization\js\login.js" />
+    <Content Include="authorization\Registration.aspx" />
+    <Content Include="authorization\js\registration.js" />
+    <Content Include="pages\Basket.aspx" />
+    <Content Include="admin\Admin.aspx" />
+    <Content Include="admin\css\admin.css" />
+    <Content Include="admin\AddGood.aspx" />
+    <Content Include="admin\js\file.js" />
+    <Content Include="admin\css\file.css" />
+    <Content Include="admin\js\add.js" />
+    <Content Include="admin\js\admin.js" />
+    <Content Include="pages\js\add.js" />
+    <Content Include="pages\css\basket.css" />
+    <Content Include="admin\Orders.aspx" />
+    <Content Include="admin\css\order.css" />
+    <Content Include="admin\js\order.js" />
+    <Content Include="IndexA.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="pages\English.aspx.cs">
+      <DependentUpon>English.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\English.aspx.designer.cs">
+      <DependentUpon>English.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Business.aspx.cs">
+      <DependentUpon>Business.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Business.aspx.designer.cs">
+      <DependentUpon>Business.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="algorithms\CSVReader.cs" />
+    <Compile Include="authorization\Exit.aspx.cs">
+      <DependentUpon>Exit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="authorization\Exit.aspx.designer.cs">
+      <DependentUpon>Exit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="authorization\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="authorization\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="authorization\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="authorization\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="algorithms\CSVWriter.cs" />
+    <Compile Include="algorithms\Handlers.cs" />
+    <Compile Include="pages\Basket.aspx.cs">
+      <DependentUpon>Basket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Basket.aspx.designer.cs">
+      <DependentUpon>Basket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AddGood.aspx.cs">
+      <DependentUpon>AddGood.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AddGood.aspx.designer.cs">
+      <DependentUpon>AddGood.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexA.aspx.cs">
+      <DependentUpon>IndexA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexA.aspx.designer.cs">
+      <DependentUpon>IndexA.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="db\" />
+    <Folder Include="pages\" />
+    <Folder Include="pages\css\" />
+    <Folder Include="pages\js\" />
+    <Folder Include="content\" />
+    <Folder Include="algorithms\" />
+    <Folder Include="authorization\" />
+    <Folder Include="authorization\css\" />
+    <Folder Include="authorization\js\" />
+    <Folder Include="admin\" />
+    <Folder Include="admin\css\" />
+    <Folder Include="admin\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="content\business\images\.DS_Store" />
+    <None Include="content\english\images\.DS_Store" />
+    <None Include="content\index\images\.DS_Store" />
+    <None Include="db\goods.csv" />
+    <None Include="db\users.csv" />
+    <None Include="db\orders.csv" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="0" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>
